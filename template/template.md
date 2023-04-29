@@ -1,14 +1,14 @@
-#Functional Requirements
-Use cases
-Scenarios that will not be covered 
-Consumer and consuming patterns
+# Functional Requirements
+-Use cases
+-Scenarios that will not be covered 
+-Consumer and consuming patterns
 
-#Non-Functional Requirements & Design Goals
-How many will use
-Latency and Throughput requirements
-Consistency vs Availability
+# Non-Functional Requirements & Design Goals
+-How many will use
+-Latency and Throughput requirements
+-Consistency vs Availability
 
-##Estimations
+## Estimations
 Throughput (QPS for read and write queries)
 Latency expected from the system (for read and write queries)
 Number of servers/shards required for Appliction/Datasources
@@ -22,17 +22,17 @@ Memory estimates
 - How much RAM and how many machines do we need for us to achieve this ?
 - Amount of data you want to store in disk/ssd
 
-#System View /System Anatomy / Microservices
-##Breath Problem
+# System View /System Anatomy / Microservices
+## Breath Problem
 Systems required to build the solution
 Integration Pattens of the systems
-##Depth Problem
+## Depth Problem
 System in detail
 Algorithms used in solving the problem
 
 
-#Design Deep Dive
-##Detailed view
+# Design Deep Dive
+## Detailed view
 The algorithm
 Individual components:
 -> Availability, Consistency and Scale story for each component
@@ -41,7 +41,7 @@ Individual components:
 APIs
 Database Schema
 Risks & Tradeoffs
-##Think about the following components, how they would fit in and how it would help
+## Think about the following components, how they would fit in and how it would help
 a) DNS
 b) CDN [Push vs Pull]
 c) Load Balancers [Active-Passive, Active-Active, Layer 4, Layer 7]
