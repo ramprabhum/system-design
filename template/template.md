@@ -4,43 +4,43 @@
 - Consumer and consuming patterns
 
 # Non-Functional Requirements & Design Goals
--How many will use
--Latency and Throughput requirements
--Consistency vs Availability
+- How many will use
+- Latency and Throughput requirements
+- Consistency vs Availability
 
 ## Estimations
-Throughput (QPS for read and write queries)
-Latency expected from the system (for read and write queries)
-Number of servers/shards required for Appliction/Datasources
-Read/Write ratio
-Traffic estimates
-- Write (QPS, Volume of data)
-- Read  (QPS, Volume of data)
-Storage estimates
-Memory estimates
-- If we are using a cache, what is the kind of data we want to store in cache
-- How much RAM and how many machines do we need for us to achieve this ?
-- Amount of data you want to store in disk/ssd
+- Throughput (QPS for read and write queries)
+- Latency expected from the system (for read and write queries)
+- Number of servers/shards required for Appliction/Datasources
+- Read/Write ratio
+- Traffic estimates
+-- Write (QPS, Volume of data)
+-- Read  (QPS, Volume of data)
+- Storage estimates
+- Memory estimates
+-- If we are using a cache, what is the kind of data we want to store in cache
+-- How much RAM and how many machines do we need for us to achieve this ? 
+-- Amount of data you want to store in disk/ssd
 
 # System View /System Anatomy / Microservices
 ## Breath Problem
-Systems required to build the solution
-Integration Pattens of the systems
+- Systems required to build the solution
+- Integration Pattens of the systems
 ## Depth Problem
-System in detail
-Algorithms used in solving the problem
+- System in detail
+- Algorithms used in solving the problem
 
 
 # Design Deep Dive
 ## Detailed view
-The algorithm
-Individual components:
--> Availability, Consistency and Scale story for each component
--> Consistency and availability patterns
--> Integration Patterns
-APIs
-Database Schema
-Risks & Tradeoffs
+- The algorithm
+- Individual components:
+-- Availability, Consistency and Scale story for each component
+-- Consistency and availability patterns
+-- Integration Patterns
+- APIs
+- Database Schema
+- Risks & Tradeoffs
 ## Think about the following components, how they would fit in and how it would help
 a) DNS
 b) CDN [Push vs Pull]
