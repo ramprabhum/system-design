@@ -73,3 +73,9 @@
   - REST
   - RPC
 # Reliability/ Fault tolerance / Scaling / Performance / Security 
+## Scale
+- Scale for Storage (DB/Cache)
+- Scale for through puts(CPU/IO)
+- Scale for API paralleization 
+- Hotspots possible?
+- Availability of Geo Distribution
