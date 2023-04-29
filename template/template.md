@@ -14,13 +14,13 @@
 - Number of servers/shards required for Appliction/Datasources
 - Read/Write ratio
 - Traffic estimates
-  -- Write (QPS, Volume of data)
-  -- Read  (QPS, Volume of data)
+  - Write (QPS, Volume of data)
+  - Read  (QPS, Volume of data)
 - Storage estimates 
 - Memory estimates
-  -- If we are using a cache, what is the kind of data we want to store in cache
-  -- How much RAM and how many machines do we need for us to achieve this ? 
-  -- Amount of data you want to store in disk/ssd
+  - If we are using a cache, what is the kind of data we want to store in cache
+  - How much RAM and how many machines do we need for us to achieve this ? 
+  - Amount of data you want to store in disk/ssd
 
 # System View /System Anatomy / Microservices
 ## Breath Problem
@@ -35,9 +35,9 @@
 ## Detailed view
 - The algorithm
 - Individual components
--- Availability, Consistency and Scale story for each component
--- Consistency and availability patterns 
--- Integration Patterns
+  - Availability, Consistency and Scale story for each component
+  - Consistency and availability patterns 
+  - Integration Patterns
 - APIs
 - Database Schema
 - Risks & Tradeoffs
