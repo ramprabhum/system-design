@@ -27,7 +27,7 @@
 - SearchService
 - AccountService
 
-![system view](../../problems/images/newsfeed.png)
+![system view](../../images/newsfeed.png)
 
 
 
