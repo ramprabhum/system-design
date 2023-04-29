@@ -34,10 +34,10 @@
 # Design Deep Dive
 ## Detailed view
 - The algorithm
-- Individual components:
--- Availability, Consistency and Scale story for each component
--- Consistency and availability patterns
--- Integration Patterns
+- Individual components 
+  -- Availability, Consistency and Scale story for each component
+  -- Consistency and availability patterns
+  -- Integration Patterns
 - APIs
 - Database Schema
 - Risks & Tradeoffs
