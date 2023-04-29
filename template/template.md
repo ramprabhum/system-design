@@ -1,7 +1,7 @@
 # Functional Requirements
--Use cases
--Scenarios that will not be covered 
--Consumer and consuming patterns
+- Use cases
+- Scenarios that will not be covered 
+- Consumer and consuming patterns
 
 # Non-Functional Requirements & Design Goals
 -How many will use
