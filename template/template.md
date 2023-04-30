@@ -32,6 +32,7 @@
 
 
 # Design Deep Dive
+## Design Considerations
 ## Detailed view
 - The algorithm
 - Individual components
