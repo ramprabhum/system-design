@@ -23,6 +23,9 @@
 # System Overview
 
 ![systemview](/blob/images/cache.png)
+![systemview](/blob/images/cache1.png)
+![systemview](/blob/images/cache2.png)
+
 
 
 
@@ -48,3 +51,10 @@
 # Reliability/ Fault tolerance / Scaling / Performance / Security
 - Scale by adding more servers which can be horizontally & vertically scaled up
 - Any failures data will not be backed up and data will be inconsistent and consistency not possible
+## Scalability
+- Horizontally & Vertically
+## Data Partition
+- Distribute keys across multiple servers (Consistent caching)
+- Minimize data movement
+## Data Replication
+- Replicate the across the virtual nodes 
