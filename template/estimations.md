@@ -9,3 +9,12 @@
     - 21.6B * 500Bytes  = 1.08 TB
 - Cache Memory
     - 23K * 500Bytes * 60 * 24 * 0.2(cache factor) = 186 GB
+- - Server
+  - Number of operations per second 1000/t. t -> cpu work time in single thread
+  - Concurrent threads in a server 100-200
+  - Considering 100 threads 100*1000/t
+  - Server considering 30-40%  0.3 * 100 * 1000/t
+
+- API Parallelization
+- Hotspots
+- Availability & Geo distribution
