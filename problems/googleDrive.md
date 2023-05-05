@@ -46,15 +46,28 @@
 
 # System Overview
 
-# Deep Dive Design
+- Metadata Service
+- FileStorage/Download Service
+- Notification Service
+- Comment Service
+- Authentication Service
+
+# Deep Dive Design  
+
+![systemview](/blob/images/googledrive.png)
 
 # API
 
-
+  
 
 
 # DB Schema
-
+- uploadFile() type file resumable
+- download()
+  - path (download path file)
+- fileRevision()
+  - path
+  - limit
 
 
 # Reliability/ Fault tolerance / Scaling / Performance / Security
