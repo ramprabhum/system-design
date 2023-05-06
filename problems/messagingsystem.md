@@ -10,7 +10,9 @@
 - User Status
 
 # Non Functional Requirements
--
+- Highly consistent and available systems 
+- Faster reads 
+- Should be able to scale up for large requests
 
 # Design Considerations
 - Highly available system
