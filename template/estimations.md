@@ -18,3 +18,23 @@
 - API Parallelization
 - Hotspots
 - Availability & Geo distribution
+
+# Reasons to scale
+- Storage
+  - a = number of rows
+  - b = size of rows
+  - c = TPS/QPS 
+  - a * b / c* b * years in seconds / c* b * ttl in seconds
+- Throughput
+- high response time
+- hih latency
+- hotspots
+- availability, geolocations
+
+# Calculations Example
+
+- DB read = 10ms , Cache Read = 2ms, App = 1ms
+- Thread  = 1000/t ops
+  - DB 1000/10 = 100 OPS
+  - Cache 1000/2 = 500 OPS
+  - App 1000/1 = 1000 OPS
