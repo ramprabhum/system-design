@@ -1,5 +1,5 @@
 # Functional Requirements
-- Direct & group messaging between users (Write/Delete)
+- Direct & group messaging between users  (Write/Delete)
   - Texts
   - Pictures/Videos
 - User Registration
