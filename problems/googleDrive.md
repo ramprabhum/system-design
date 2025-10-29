@@ -79,3 +79,61 @@
 ## Data Partition
 
 ## Data Replication
+
+## Details
+A candidate interviewing for SSE @ Google was asked to break down the design of Google Drive.
+
+Another candidate who was interviewing for the role of SDE-III @ Amazon, was asked another with a file upload system question.
+
+I’ve faced these too. System design rounds love “simple” file upload questions until you add one layer of complexity:
+
+– Add virus scanning? Whole new security headache.
+–  Add multi-region storage? Now you’re fighting replication and consistency.
+–  Add instant previews or image compression? Welcome to async pipelines and job queues.
+
+Here’s my personal checklist of 15 things you must get right when building file upload systems:
+
+1. Never upload directly to your backend
+→ Use presigned URLs so files go straight to S3, GCS, or your object storage, offloading bandwidth and freeing up backend resources.
+
+2. Validate file type by content, not extension
+→ Don't trust “.jpg” or “.pdf”, read the file’s magic bytes or headers to catch disguised executables or corrupted files.
+
+3. Set strict file size limits (early)
+→ Prevent memory blowups, denial of service, and accidental 50GB “cat video” uploads.
+
+4. Multipart/chunked uploads for large files
+→ Upload big files in chunks, so you can retry failed pieces, resume partial uploads, and never lose user progress.
+
+5. Resumable uploads matter
+→ User’s WiFi dies? Don’t make them start from scratch. Store upload progress, support resume tokens.
+
+6. Async virus scanning before “marking ready”
+→ Queue the scan; don’t let user-access or public-sharing happen until the result is clean.
+
+7. Never trust user-supplied metadata
+→ Recompute MIME types, image dimensions, video duration, etc., server-side, attackers will fake everything.
+
+8. Expire unused presigned URLs fast
+→ Every upload/download link should expire in minutes, not days. Stops replay attacks and stale-link leaks.
+
+9. Background post-processing
+→ Thumbnails, transcoding, compression, indexing, all should be async jobs, not blocking the upload.
+
+10. Signed download URLs only
+ → Never expose raw S3 or GCS paths. Every download link should be time-bound and permission-checked.
+
+11. Enforce per-user and per-IP rate limits
+→ Throttle abusive clients, prevent brute force, and stop sudden spikes from melting your backend.
+
+12. Encrypt files at rest (and in transit)
+ → Use server-side encryption (SSE) on S3 or GCS, plus HTTPS/TLS for every file transfer.
+
+13. Version every upload
+→ Store new files with unique IDs or version suffixes, never overwrite by default. Enables “undo” and rollback, and prevents race conditions.
+
+14. Log every upload and access
+→ Audit logs for every file action: who uploaded, who accessed, when, and from where. Critical for debugging and compliance.
+
+15. Handle storage failures and edge cases gracefully
+→ What happens if S3 times out? What if storage quota is exceeded? Handle partial failures, show clear errors, and keep users in the loop
