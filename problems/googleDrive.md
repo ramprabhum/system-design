@@ -81,9 +81,9 @@
 ## Data Replication
 
 ## Details
-A candidate interviewing for SSE @ Google was asked to break down the design of Google Drive.
+Break down the design of Google Drive.
 
-Another candidate who was interviewing for the role of SDE-III @ Amazon, was asked another with a file upload system question.
+File upload system question.
 
 I’ve faced these too. System design rounds love “simple” file upload questions until you add one layer of complexity:
 
